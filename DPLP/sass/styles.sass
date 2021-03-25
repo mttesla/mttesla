@@ -1,0 +1,642 @@
+@import "./modules/mixin/font"
+
+
+@import "../node_modules/bootstrap/scss/functions"
+@import "../node_modules/bootstrap/scss/variables"
+@import "../node_modules/bootstrap/scss/mixins"
+@import "../node_modules/bootstrap/scss/reboot"
+@import "../node_modules/bootstrap/scss/grid"
+// @import "../node_modules/bootstrap/scss/buttons"
+
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1110px)
+$container-max-widths: ()
+
+$gutter: $grid-gutter-width
+
+@import '../node_modules/bootstrap/scss/utilities/align'
+@import '../node_modules/bootstrap/scss/utilities/flex'
+@import '../node_modules/bootstrap/scss/utilities/display'
+@import '../node_modules/bootstrap/scss/utilities/text'
+@import '../node_modules/bootstrap/scss/utilities/sizing'
+@import '../node_modules/bootstrap/scss/utilities/spacing'
+
++font-face("RedHatDisplay", "./fonts/RedHatDisplayBold/RedHatDisplay-Bold", bold)
++font-face("RedHatDisplay", "./fonts/RedHatDisplayMedium/RedHatDisplay-Medium", medium)
++font-face("RedHatDisplay", "./fonts/RedHatDisplayRegular/RedHatDisplay-Regular", regular)
+
++font-face("Roboto", "./fonts/RobotoMedium/Roboto-Medium", medium)
++font-face("Roboto", "./fonts/RobotoRegular/Roboto-Regular", regular)
+
+$color: #fff
+
+* 
+    box-sizing: border-box
+    
+    
+
+body 
+    background: $color
+    margin-left: auto
+    margin-right: auto
+    max-width: 1440px
+    
+
+.menu 
+    display: flex
+    justify-content: space-around
+    font-family: 
+    font-weight: medium
+    text-decoration: none
+    margin: 65px 0 16px 40px
+    font-size: 20px
+    font-family: RedHatDisplay
+    font-weight: medium
+    padding: 0
+    li 
+        list-style-type: none
+    a
+        color: grey
+        text-decoration: none
+        &:hover
+            color: #8643DC
+            text-decoration: none
+    .page-about 
+        color: #25202F
+        &:hover
+            color: lighten(#25202F, 25%)
+
+.logo 
+    margin-top: 60px     
+
+.active-menu  
+    -webkit-border-radius: 70px
+    -moz-border-radius: 70px
+    width: 70px
+    height: 70px
+    background: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap 
+    flex-direction: column 
+    position: absolute
+    right: 0
+    margin-top: 50px
+    box-shadow: 0px 20px 50px rgba(198, 185, 233, 0.3)
+    button
+        border: none
+        background: #fff
+    hr 
+        border: none
+        height: 2px
+        color: #25202F
+        background-color: #25202F
+        width: 22px
+        margin: 5px 5px
+    
+
+.content-hello
+    font-family: RedHatDisplay
+    margin-top: 0
+    .hello
+        margin-top: 130px
+        font-size: 24px
+        color: #666666
+        line-height: 28,8px
+        font-weight: medium
+    .name
+        font-size: 60px
+        font-weight: bold
+        color: #25202F
+        line-height: 72px
+        margin-top: 15px
+    .designer
+        color: #25202F
+        font-weight: regular
+        font-size: 24px
+        line-height: 31,75px
+    .btn
+        color: #fff
+        font-weight: regular
+        font-size: 24px
+        background: #8643DC
+        border: 0
+        line-height: 31,75px
+        text-align: center
+        width: 200px
+        height: 60px
+        border-radius: 100px
+        margin-top: 50px
+        &:hover
+            background: darken(#8643DC, 10%)
+
+.gradient-img-box
+    background: rgb(221,249,235)
+    background: radial-gradient(circle, rgba(221,249,235,1) 7%, rgba(221,249,235,1) 19%, rgba(254,235,235,1) 38%, rgba(254,235,235,1) 45%, rgba(254,236,236,1) 49%, rgba(255,255,255,1) 66%, rgba(255,255,255,1) 78%)
+
+
+.container-central-image
+    position: relative
+    max-width: 100%
+    .background-1
+        position: relative
+        width: 116px
+        height: 116px
+        bottom: 480px
+        left: 630px
+    .bg-2
+        position: absolute
+        top: 155px
+        left: 455px
+    .bg-3
+        position: absolute
+        bottom: 295px
+        left: 515px
+    .bg-4
+        position: absolute
+        bottom: 230px
+        left: -45px
+    .bg-5
+        position: absolute
+        bottom: 450px
+        right: -200px
+    .bg-6
+        position: absolute
+        bottom: 145px
+        right: -120px
+    .circle-1
+        -webkit-border-radius: 7px
+        -moz-border-radius: 7px
+        width: 7px
+        height: 7px
+        border: 0
+        background: #F57DC8
+        top: -70px
+        right: 160px
+        position: absolute
+    .circle-2
+        -webkit-border-radius: 7px
+        -moz-border-radius: 7px
+        width: 7px
+        height: 7px
+        border: 0
+        background: #F57DC8
+        top: 130px
+        left: 15px
+        position: absolute
+    .circle-3
+        -webkit-border-radius: 7px
+        -moz-border-radius: 7px
+        width: 7px
+        height: 7px
+        border: 0
+        background: #43DC77
+        top: 245px
+        right: 3px
+        position: absolute
+    .circle-4
+        -webkit-border-radius: 7px
+        -moz-border-radius: 7px
+        width: 7px
+        height: 7px
+        border: 0
+        background: #8643DC
+        bottom: 25px
+        left: 100px
+        position: absolute
+        
+
+.tagline 
+    font-family: RedHatDisplay
+    font-weight: regular
+    font-size: 18px
+    line-height: 23,81px
+    color: #8643DC
+    margin-top: 100px
+    &:hover
+        color: darken(#8643DC, 30%)
+
+.underline
+        width: 50px
+        color: #8643DC
+        margin-top: 8px
+        height: 2px
+        background-color: #8643DC
+        border: 0 none
+        margin-left: 0
+
+.titles-bold-text 
+    color: #25202F
+    font-family: RedHatDisplay
+    font-weight: bold
+    font-size: 36px 
+    margin-top: 10px
+
+.benefits 
+    font-family: RedHatDisplay
+    margin-top: 60px
+    margin-bottom: 60px
+    .subject-ux 
+        .subtitle
+            display: flex
+            align-items: center
+        p
+            margin: 0 0 0 30px
+            font-weight: medium
+            font-size: 24px
+            line-height: 31,75px
+        .text-benefits 
+                font-size: 16px
+                font-weight: regular
+                margin-top: 20px
+
+
+.clients-logo-boxes
+    display: flex
+    justify-content: space-between
+    font-family: RedHatDisplay
+    margin: 40px 0 0 
+    img
+        margin-top: 30px
+    p
+        font-size: 18px
+        font-weight: medium
+        text-align: center
+        line-height: 23,81px
+        margin-top: 20px 
+    .gradent-slack-box
+        -webkit-box-shadow: 38px 35px 64px -10px rgba(255, 231, 240, 0.66)
+        -moz-box-shadow: 38px 35px 64px -10px rgba(255, 231, 240, 0.66)
+        box-shadow: 38px 35px 64px -10px rgba(255, 231, 240, 0.66)
+    .slack-box
+        width: 170px
+        height: 170px 
+        border-radius: 10px
+        background: #FFF7FA
+        border: 1px solid #FFE7F0
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        flex-direction: column
+    .gradient-medium-box
+        -webkit-box-shadow: 38px 35px 64px -10px rgba(202, 255, 225, 0.66)
+        -moz-box-shadow: 38px 35px 64px -10px rgba(202, 255, 225, 0.66)
+        box-shadow: 38px 35px 64px -10px rgba(202, 255, 225, 0.66)
+    .medium-box
+        width: 170px
+        height: 170px 
+        border-radius: 10px
+        background: #EDFFF5
+        border: 1px solid #CAFFE1
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        flex-direction: column
+    .gradient-microsoft-box
+        -webkit-box-shadow: 38px 35px 64px -10px rgba(221, 245, 255, 0.66)
+        -moz-box-shadow: 38px 35px 64px -10px rgba(221, 245, 255, 0.66)
+        box-shadow: 38px 35px 64px -10px rgba(221, 245, 255, 0.66)
+    .microsoft-box
+        width: 170px
+        height: 170px 
+        border-radius: 10px
+        background: #F5FCFF
+        border: 1px solid #DDF5FF
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        flex-direction: column
+    .gradient-zeplin-box
+        -webkit-box-shadow: 38px 35px 64px -10px rgba(255, 238, 201, 0.66)
+        -moz-box-shadow: 38px 35px 64px -10px rgba(255, 238, 201, 0.66)
+        box-shadow: 38px 35px 64px -10px rgba(255, 238, 201, 0.66)
+    .zeplin-box
+        width: 170px
+        height: 170px 
+        border-radius: 10px
+        background: #FFFBF2
+        border: 1px solid #FFEEC9
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        flex-direction: column
+    .gradient-shopify-box
+        -webkit-box-shadow: 38px 35px 64px -10px rgba(219, 255, 195, 0.66)
+        -moz-box-shadow: 38px 35px 64px -10px rgba(219, 255, 195, 0.66)
+        box-shadow: 38px 35px 64px -10px rgba(219, 255, 195, 0.66)
+    .shopify-box
+        width: 170px
+        height: 170px 
+        border-radius: 10px
+        background: #F4FFED
+        border: 1px solid #DBFFC4
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        flex-direction: column
+        
+
+.gradient-container
+    background: rgb(244,248,245)
+    background: radial-gradient(circle, rgba(244,248,245,1) 9%, rgba(255,255,255,1) 94%)
+
+.testimonials-title 
+    margin-top: 200px
+
+.testimonials-top
+    margin: 30px 0 0 
+
+.testimonials-bottom
+    position: absolute
+    bottom: 50px
+
+.quote-box
+    max-width: 570px
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    flex-direction: column
+    p
+        font-weight: medium
+        font-family: RedHatDisplay
+        color: #636066
+        line-height: 32px
+        font-size: 16px
+
+.ceo 
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    flex-direction: column
+    font-family: RedHatDisplay
+    img
+        border-radius: 15px
+    .ceo-name
+        font-weight: medium
+        font-size: 20px
+        line-height: 26,46px
+        margin: 20px 0 0
+    .post 
+        font-size: 16px
+        font-weight: regular
+        margin-top: 3px
+
+.scroll-indicator
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 40px
+    .circle-one
+        -webkit-border-radius: 10px
+        -moz-border-radius: 10px
+        width: 10px
+        height: 10px
+        border: 0
+        background: #8643DC
+        margin-right: 10px
+    .circles
+        -webkit-border-radius: 10px
+        -moz-border-radius: 10px
+        width: 10px
+        height: 10px
+        border: 1px solid #DEBAD9
+        background: #fff
+        margin: 0 10px 0
+
+.linear-gradient 
+    display: flex
+    align-item: center
+    background: rgb(244,248,245)
+    background: radial-gradient(circle, rgba(244,248,245,1) 17%, rgba(255,255,255,1) 84%)
+
+.link-more
+    .box-link
+        position: absolute
+        right: 0
+        display: flex
+        align-items: center
+        a 
+            font-family: RedHatDisplay
+            font-size: 24px
+            font-weight: medium
+            color: #25202F
+            margin-right: 15px
+            &:hover
+                color: lighten(#25202F, 50%)
+                text-decoration: underline
+
+        
+
+.projects-portfolio-box
+    display: flex
+    justify-content: space-between
+    width: 100%
+    flex-wrap: nowrap
+    flex-direction: row
+    img
+        width: 100%
+
+.blog-main-container
+    margin-top: 100px
+    margin-left: 0 auto
+    margin-right: 0 auto
+    font-family: RedHatDisplay
+    .tagline-blog
+        font-weight: regular
+        font-size: 18px
+        line-height: 23,81px
+        color: #8643DC
+        &:hover
+            color: darken(#8643DC, 30%)
+    .titles-bold-blog
+        color: #25202F
+        font-weight: bold
+        font-size: 33px 
+
+    .preview-box-1
+        time
+            color: #8643DC
+            font-weight: medium
+            font-size: 16px
+            line-height: 21px
+        a
+            font-weight: bold
+            font-size: 20px
+            line-height: 26px
+            margin-top: 10px
+            color: #000
+            &:hover
+                color: lighten(#000, 20%)
+                text-decoration: underline
+        p 
+            margin-top: 10px
+        img
+            margin-bottom: 20px
+
+    .main-preview-box-2
+        margin-left: 10px
+        padding: 0
+        margin: 0 20px 0
+        max-width: 255px
+        .preview-box-2
+            position: relative
+            display: block
+            time
+                font-size: 16px
+                font-weight: medium
+                color: #fff
+                position: absolute
+                max-width: 200px
+                left: 20px
+                top: 225px
+                z-index: 5
+            p
+                font-size: 20px
+                font-weight: bold
+                color: #fff
+                max-width: 200px
+                position: absolute
+                left: 20px
+                top: 250px
+                z-index: 5
+                &:hover
+                    color: darken(#fff, 10%)
+                    text-decoration: underline
+                
+                                        
+.main-preview-box-3
+    padding: 0
+    margin-left: 5px
+    max-width: 255px
+    .preview-box-3
+        padding: 0
+        margin: 0
+        time
+            font-size: 16px
+            font-weight: medium
+            color: #fff
+            position: absolute
+            max-width: 200px
+            left: 20px
+            top: 225px
+            z-index: 5
+        p
+            font-size: 20px
+            font-weight: bold
+            color: #fff
+            max-width: 200px
+            position: absolute
+            left: 20px
+            top: 250px
+            z-index: 5
+            &:hover
+                color: darken(#fff, 10%)
+                text-decoration: underline
+
+.gradient-img
+    position: absolute
+    width: 255px
+    height: 350px
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #25202F 100%)
+    background-size: cover
+    z-index: 3
+    top: 0
+    left: 0
+    img
+        position: relative
+
+
+.my-mail 
+    color:#8643DC
+    font-size: 24px
+    font-weight: regular
+    font-family: Roboto
+    margin-right: 0
+    text-decoration: underline
+    position: absolute
+    right: 0
+    &:hover
+        color: #000
+        text-decoration: none
+
+
+.application-form-box
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    hr
+        width: 100%
+        border: none
+        height: 1px
+        color: #DAD2E3
+        background-color: #DAD2E3
+    .input-wrapper
+        border: 0
+        font-family: RedHatDisplay
+        font-size: 20px
+        font-weight: regular
+        color: #A8A0B0
+        margin: 30px 0 8px  
+        outline: 0
+        background: rgba(0, 0, 0, 0)
+
+
+  
+.button-box
+    margin-top: 30px
+    .btn
+        color: #fff
+        font-weight: regular
+        font-size: 18px
+        background: #8643DC
+        border: 0
+        line-height: 31,75px
+        text-align: center
+        width: 200px
+        height: 60px
+        border-radius: 100px
+        &:hover
+            background: darken(#8643DC, 10%)
+    img
+        margin: 0 6px 
+
+.button-box-send
+    margin-top: 30px
+    button
+        background: $color
+        border: none
+
+.container-footer
+    margin-top: 100px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    flex-direction: column
+    text-align: center
+    p 
+        font-family: RedHatDisplay
+        color: #21232D
+        font-size: 36px
+        font-weight: medium
+    .socials-box
+        img
+            margin: 0 20px 50px 20px
+
+
+
+	
+
+	
+	
+     
