@@ -1,0 +1,217 @@
+@import "./modules/mixin/font/font"
+
+
+@import "../node_modules/bootstrap/scss/functions"
+@import "../node_modules/bootstrap/scss/variables"
+@import "../node_modules/bootstrap/scss/mixins"
+@import "../node_modules/bootstrap/scss/reboot"
+@import "../node_modules/bootstrap/scss/grid"
+// @import "../node_modules/bootstrap/scss/buttons"
+
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: ()
+
+$gutter: $grid-gutter-width
+
+@import '../node_modules/bootstrap/scss/utilities/align'
+@import '../node_modules/bootstrap/scss/utilities/flex'
+@import '../node_modules/bootstrap/scss/utilities/display'
+@import '../node_modules/bootstrap/scss/utilities/text'
+@import '../node_modules/bootstrap/scss/utilities/sizing'
+@import '../node_modules/bootstrap/scss/utilities/spacing'
+
++font-face("Gilroy", "./fonts/GilroyBold/Gilroy-Bold", bold)
++font-face("Gilroy", "./fonts/GilroyMedium/Gilroy-Medium", medium)
+
+$color: #fff
+
+*
+    box-sizing: border-box
+
+
+body 
+    background: $color
+    margin-left: auto
+    margin-right: auto
+    font-family: Gilroy
+
+.menu 
+    font-weight: medium
+    display: flex
+    justify-content: space-between
+    color: #828282
+    margin-top: 33px
+    padding: 0
+    li
+        list-style-type: none
+        a
+            color: #828282
+            text-decoration: none
+        .menu-first-child
+            color: #000
+        &:hover
+            color: lighten(#000, 20%)
+    hr
+        width: 100%
+        border: 1px solid #828282
+        height: 0
+
+.familiarity-box 
+    margin-top: 20px
+    color: #070707
+    .designer-name
+        font-size: 48px
+        font-weight: bold
+        line-height: 60px
+        position: relative
+        left: 0
+    .familiarity
+        font-size: 18px
+        font-weight: medium
+        line-height: 22px
+        display: flex
+        justify-content: center
+        text-align: left
+        align-items: flex-end
+        margin-bottom: 10px
+    .lang
+        transform: rotate(-90deg)
+        display: flex
+        flex-wrap: nowrap
+        text-align: center
+        flex-direction: row
+        align-items: flex-end
+        position: relative
+        justify-content: center
+        left: 120px
+        bottom: -10px
+        button
+            background: $color
+            border: 0 none
+            font-size: 18px
+            font-weight: bold
+            color: #070707
+            padding: 5px
+            span
+                color: #828282
+
+.designer-photo
+    margin: 20px 0 100px
+    img
+        width: 100%
+
+.max-about
+    background: #f6f6f6
+
+.about-me-section
+    text-align: center
+    height: 100%
+    padding: 50px 0 50px
+    display: flex
+    justify-content: center
+    .container-about
+        width: 485px
+        padding-bottom: 15px
+    h2
+        color: #070707
+        font-weight: bold
+        font-size: 34px
+        line-height: 42px
+    p
+        font-size: 18px
+        line-height: 22px
+
+.skills-heading
+    h2
+        color: #070707
+        font-size: 34px
+        font-weight: bold
+        text-align: center
+        margin-top: 90px
+    p
+        margin-top: 60px
+        font-weight: medium
+        font-size: 18px
+        text-align: center
+        color: #070707
+
+
+
+.skills-box
+    display: flex
+    justify-content: space-between
+    text-align: center
+    margin: 80px 0
+    .app-box
+        width: 170px
+    p
+        color: #828282
+        font-size: 14px
+        line-height: 18px
+        margin-top: 25px
+        font-weight: medium
+    .stars
+        display: flex
+        justify-content: space-between
+        margin-top: 30px
+
+
+.main-portfolio-box
+    background: #f6f6f6
+    text-align: center
+    h2
+        font-weight: bold
+        color: #070707
+        font-size: 34px
+        line-height: 42px
+        text-align: center
+        margin: 120px 0 50px
+    .portfolio-first
+    img
+        width: 100%
+    p
+        margin: 40px 0 100px
+    a
+        text-align: center
+        font-size: 18px
+        color: #070707
+        text-decoration: none
+        &:hover
+            color: lighten(#070707, 20%)
+            text-decoration: underline
+        
+footer
+    text-align: center
+    color: #070707
+    h2
+        margin: 110px 0 20px
+        font-weight: bold
+        font-size: 34px
+    p
+        font-weight: medium
+        font-size: 18px
+    button
+        background: #000
+        color: #fff
+        width: 180px
+        height: 42px
+        font-size: 18px
+        border-radius: 90px
+        margin: 20px 0 90px
+        line-height: 22px
+
+.socials-box
+    weight: 350px
+    display: flex
+    justify-content: center
+    img
+        margin: 0 30px
+.socials-text
+    color: #828282
+    font-size: 14px
+    font-weight: medium
+    margin: 40px 0 120px
+
+

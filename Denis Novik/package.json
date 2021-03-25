@@ -1,0 +1,39 @@
+{
+	"name": "universal-min",
+	"author": "anatoliy.akhmatov@gmail.com",
+	"license": "ISC",
+	"main": "gulpfile.babel.js",
+	"dependencies": {
+		"bootstrap": "^4.3.1"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.4.3",
+		"babel-core": "^6.26.3",
+		"babel-loader": "7.1.1",
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-stage-3": "^6.24.1",
+		"browser-sync": "^2.26.3",
+		"uglifyjs-webpack-plugin": "^2.2.0",
+		"css-loader": "^0.28.7",
+		"css-mqpacker": "^7.0.0",
+		"cssnano": "^4.1.8",
+		"file-loader": "^1.1.4",
+		"gulp": "^4.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sass-glob": "^1.0.9",
+		"gulp-uglify": "^3.0.1",
+		"json-loader": "^0.5.7",
+		"node-sass": "^4.5.3",
+		"postcss-preset-env": "^6.5.0",
+		"postcss-short": "^5.0.0",
+		"postcss-sorting": "^4.0.1",
+		"sass-loader": "^6.0.6",
+		"sort-css-media-queries": "^1.4.3",
+		"vinyl-named": "^1.1.0",
+		"vue-loader": "14.2.2",
+		"vue-template-compiler": "^2.4.4",
+		"webpack-stream": "^5.2.1"
+	}
+}
